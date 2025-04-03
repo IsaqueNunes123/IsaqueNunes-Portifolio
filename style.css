@@ -117,6 +117,53 @@ footer {
     margin-top: 20px;
 }
 
+.card-tecnologia img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+.card-tecnologia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-tecnologia{
+    text-align: center;
+    opacity: 0; 
+    font-size: 0px;
+    transition: opacity 0.3s, font-size 0.3s;
+}
+.card-tecnologia:hover .text-tecnologia{
+    text-align: center;
+    opacity: 1; 
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    transition: opacity 0.3s, font-size 0.3s;
+    
+    padding-top: 0.5rem;
+    
+}
+.card-tecnologia:hover img{
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+.tecnologias{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;    
+}
+
 .projetos {
     display: flex;
     flex-wrap: wrap;
