@@ -175,6 +175,64 @@ footer {
     flex-wrap: wrap;
     gap: 20px; /* Espaço entre os projetos */
     justify-content: center; /* Centraliza os projetos */
+    padding: 2rem;
+}
+
+.projetos .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1rem;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.projetos .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.projetos .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.projetos .card-body {
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+.projetos .card-title {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.projetos .card-text {
+    color: #666;
+    margin-bottom: 1.5rem;
+    min-height: 75px;
+}
+
+.projetos .btn-secondary {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #5e5e5e;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.projetos .btn-secondary:hover {
+    background-color: #444;
+}
+
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Para dispositivos pequenos (celulares) */
