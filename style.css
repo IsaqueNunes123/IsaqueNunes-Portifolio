@@ -117,51 +117,57 @@ footer {
     margin-top: 20px;
 }
 
-.card-tecnologia img{
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
+.card-tecnologia img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
-.card-tecnologia{
+
+.card-tecnologia {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    background-color: #fff;
-    margin: 10px;
-    position: relative;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.text-tecnologia {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    height: 0;
+    opacity: 0;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.text-tecnologia{
-    text-align: center;
-    opacity: 0; 
-    font-size: 0px;
-    transition: opacity 0.3s, font-size 0.3s;
-}
-.card-tecnologia:hover .text-tecnologia{
-    text-align: center;
-    opacity: 1; 
-    font-size: 1.5rem;
-    color: rgb(0, 0, 0);
-    transition: opacity 0.3s, font-size 0.3s;
-    
-    padding-top: 0.5rem;
-    
-}
-.card-tecnologia:hover img{
-    transform: scale(1.2);
-    transition: transform 0.3s;
+.card-tecnologia:hover {
+    transform: translateY(-5px);
+    background-color: #5e5e5e;
+    color: white;
 }
 
-.tecnologias{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;    
+.card-tecnologia:hover img {
+    transform: scale(1.1);
+}
+
+.card-tecnologia:hover .text-tecnologia {
+    height: auto;
+    opacity: 1;
+    margin-top: 1rem;
+    color: white;
+}
+
+.tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
 .projetos {
@@ -170,12 +176,6 @@ footer {
     gap: 20px; /* Espaço entre os projetos */
     justify-content: center; /* Centraliza os projetos */
 }
-
-/* .projeto {
-    flex: 1 1 calc(50% - 20px); 
-    max-width: calc(50% - 20px); 
-} */
-
 
 /* Para dispositivos pequenos (celulares) */
 @media (max-width: 768px) {
@@ -204,6 +204,10 @@ footer {
     section {
         padding: 15px;
         max-width: 100%;
+    }
+
+    .tecnologias {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
